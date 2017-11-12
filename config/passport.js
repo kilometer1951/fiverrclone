@@ -52,7 +52,7 @@ passport.use('local-login', new LocalStrategy({
 passport.use(new FacebookStrategy({
   clientID: '168977743698754',
   clientSecret: '45aefccc97ffe1a2d82f8084c50de1fa',
-  callbackURL: 'https://calm-cliffs-98198.herokuapp.com/auth/facebook/callback',
+  callbackURL: 'https://morning-plateau-98641.herokuapp.com/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'email']
 }, function(accessToken, refreshToken, profile, next) {
     User.findOne({ facebookId: profile.id }, function(err, user) {
@@ -76,7 +76,7 @@ passport.use(new FacebookStrategy({
 passport.use(new GoogleStrategy({
   clientID: '1079510085711-g22hm1rahpkfgbql2mga0lv77cvuu7sv.apps.googleusercontent.com',
   clientSecret: 'fqqyXO05oav9Vx81W36Iz98F',
-  callbackURL: 'https://calm-cliffs-98198.herokuapp.com/auth/google/callback',
+  callbackURL: 'https://morning-plateau-98641.herokuapp.com/auth/google/callback',
 }, function(accessToken, refreshToken, profile, next) {
     User.findOne({ googleId: profile.id }, function(err, user) {
       if (user) {
