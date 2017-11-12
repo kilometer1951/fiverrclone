@@ -24,7 +24,8 @@ const sessionMiddleware = session({
   resave: true,
   saveUninitialized: true,
   secret: config.secret,
-  store: new MongoStore({ url: config.database, autoReconnect: true })
+  store: new MongoStore({ url: config.database, autoReconnect: true }),
+  cookie: {expires: new Date(253402300000000)}
 });
 
 mongoose.connect(config.database, function(err) {
