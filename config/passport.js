@@ -50,7 +50,7 @@ passport.use('local-login', new LocalStrategy({
 
 /* Sign in using facebook */
 passport.use(new FacebookStrategy({
-  clientID: '168977743698754',
+  clientID: '407468023060708',
   clientSecret: '57a91987d5640502525478b89a7b0055',
   callbackURL: 'https://morning-plateau-98641.herokuapp.com/auth/facebook/callback',
   profileFields: ['id', 'displayName', 'email']
